@@ -208,7 +208,8 @@ body {
 .swot {
   .swot-inner {
     .grid;
-    .grid-template-columns(repeat(3, auto));
+    .flex-wrap(wrap);
+    .grid-template-columns(repeat(3, 100%/3));
     margin-top: -78px;
     position: relative;
     background-color: #fff;
@@ -218,6 +219,7 @@ body {
     .item:nth-child(5) {
       img {
         width: 100%;
+        height: 100%;
       }
     }
     .item:nth-child(2),
@@ -404,7 +406,6 @@ body {
   text-align: center;
   background-color: #222222;
   color: #777777;
-  padding-bottom: 200px;
   .footer-conpany-intro {
     border-bottom: 1px solid #777777;
     padding-bottom: 48px;
@@ -628,6 +629,9 @@ body {
       font-size: 25px;
     }
   }
+  .intro-partner .logo {
+    grid-row: 30px;
+  }
   .footer .footer-conpany-intro .social-company {
     .flex;
     .justify-content(space-around);
@@ -636,6 +640,8 @@ body {
   .intro-partner .logo {
     .grid;
     .grid-template-columns(repeat(2, 50%));
+    grid-row-gap: 15px;
+
   }
   .footer .footer-info-company {
     .grid-template-columns(100%);
@@ -647,6 +653,7 @@ body {
     }
   }
 }
+
 
 // css slick js
 .slick-dots {
@@ -662,7 +669,7 @@ body {
   display: inline-block;
   width: 0.9375rem;
   height: 0.9375rem;
-  margin: 0 0.875rem;
+  margin: 0 -1.125rem;
   padding: 0;
   cursor: pointer;
 }
@@ -684,7 +691,7 @@ body {
   color: transparent;
   outline: none;
   border: none;
-  background: rgba(47, 31, 22, 0.5);
+  background:#777777;
   border-radius: 50%;
 }
 
@@ -692,7 +699,59 @@ body {
 .slick-dots li button:focus,
 .slick-dots li.slick-active button {
   outline: none;
-  background-color: #2d1d15;
+  background-color: #dd2f31;
   .transition(all 300ms ease 0s);
-  color: #2d1d15;
+  color: #dd2f31;
+}
+@media (min-width: 991px) and (max-width: 1204px)  {
+  .header-top-inner {
+    .menu {
+      ul{
+        li {
+          margin-right: 30px;
+         }
+      }   
+    }
+    .search-item {
+      li {
+        margin-left: 15px;
+      }
+    }
+  }
+  .product {
+    .item {
+      grid-gap : 0;
+      .item-wrapper {
+        .item-wrapper-inner {
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .feedback {
+    padding-bottom: 100px;
+  }
+  .swot {
+    .swot-inner {
+      .item:nth-child(2),
+      .item:nth-child(6),
+      .item:nth-child(4) {
+        text-align: center;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        img {
+          margin-top: 20px;
+          max-width: 100%;
+        }
+        h5 {
+          font-size: 18px;
+          font-weight: 700;
+          text-transform: uppercase;
+          margin-top: 20px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
 }
