@@ -71,7 +71,7 @@ body {
   background-color: #292929;
   background-image: url(../img/banner.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   &-top-inner {
     .flex;
     .justify-content(space-between);
@@ -177,7 +177,7 @@ body {
   h2 {
     font-size: 60px;
     font-weight: 700;
-    margin-top: 203px;
+    margin-top: 103px;
     margin-left: -4px;
   }
   h4 {
@@ -193,7 +193,7 @@ body {
   }
   button {
     margin-top: 37px;
-    margin-bottom: 318px;
+    margin-bottom: 20px;
     padding: 13px 46px;
     max-width: 170px;
     font-size: 14px;
@@ -358,7 +358,7 @@ body {
   h3 {
     font-size: 36px;
     font-weight: 700;
-    margin-top: 96px;
+    margin-top: 40px;
     margin-bottom: 37px;
   }
   .content-feedback {
@@ -681,6 +681,7 @@ body {
   .swot .swot-inner {
     margin: auto;
     max-width: 300px;
+    margin-top: 20px;
     .grid-template-columns(auto);
     img {
       max-width: 100%;
@@ -702,7 +703,7 @@ body {
       .product-sellers-inner {
         ul {
           display: block;
-          margin-top: 120px;
+          margin-top: 50px;
           li {
             margin: 0;
             li:focus {
@@ -763,16 +764,28 @@ body {
     .grid-template-columns(repeat(2, 50%));
     grid-row-gap: 15px;
   }
-  .footer .footer-info-company {
-    .grid-template-columns(100%);
-    .item {
-      margin-left: 50px;
-      h4 {
-        margin-top: 20px;
+  .footer {
+    .footer-conpany-intro{
+      img {
+        margin-top: 50px;
       }
-      a:focus {
-        color: @hover-text;
+    }
+    .footer-info-company {
+      .grid-template-columns(100%);
+      .item {
+        h4 {
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+        a:focus {
+          color: @hover-text;
+        }
       }
     }
   }
 }
+@media (min-width: 1116px) {
+  .header {
+   background-size: cover;
+  }
+} 
