@@ -69,9 +69,12 @@ body {
 
 .header {
   background-color: #292929;
-  background-image: url(../img/banner.png);
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-image: url(../img/girl.png) ,url(../img/Base.png);
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100px 80px,100px 80px ;
+  // background: url(../img/girl.png) right bottom no-repeat, url(../img/Base.png) left top repeat;
+  // background-image: url(../Base.png) right bottom no-repeat ,url(../img/girl.png) right bottom no-repeat;
   &-top-inner {
     .flex;
     .justify-content(space-between);
