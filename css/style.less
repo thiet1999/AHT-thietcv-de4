@@ -41,9 +41,10 @@
 }
 
 .container {
-  width: 1170px;
+  max-width: 1200px;
+  width: 100%;
   margin: auto;
-  padding: 0;
+  padding: 0 15px;
   .box-sizing(border-box);
 }
 .row {
@@ -70,9 +71,9 @@ body {
 .header {
   background-color: #292929;
   background-image: url(../img/girl.png) ,url(../img/Base.png);
-  background-position: right bottom, left top;
-  background-repeat: no-repeat, no-repeat;
-  background-size: 100px ,80px ;
+  background-position: center bottom, left top;
+  background-repeat: no-repeat, repeat;
+  background-size: 200px,auto ;
   // background: url(../img/girl.png) right bottom no-repeat, url(../img/Base.png) left top repeat;
   // background-image: url(../Base.png) right bottom no-repeat ,url(../img/girl.png) right bottom no-repeat;
   &-top-inner {
@@ -655,7 +656,6 @@ body {
 
 @media (min-width: 320px) and (max-width: 629px) {
 
-
   .checkbtn {
     display: block;
   }
@@ -787,6 +787,6 @@ body {
 }
 @media (min-width: 1116px) {
   .header {
-   background-size: cover;
+  //  background-image: url(../img/girl.png);
   }
 } 
